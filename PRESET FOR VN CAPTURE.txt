@@ -1,0 +1,6 @@
+[Preset Settings for Capture VRoid]
+1. Turn off all the things in 'General Editor'
+2. Antialiasing -> High
+3. Bloom (Color #8000FF; Intensity 3.02; SoftKnee 0.30)
+4. Comic (Color Ratio 0.00; Strip Density 0.00)
+5. Resolution WQHD (2560 x 1440)
