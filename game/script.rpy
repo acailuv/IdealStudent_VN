@@ -4,50 +4,31 @@
 # name of the character.
 
 define i = Character("Isabelle")
-define r = Character("Rika", color="#ffe59e")
+define r = Character("Rika", color="#ff8000")
 define e = Character("Elizabeth", color="#ff8aef")
+define mc = Character("You", color="#007bff")
 
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # Example screen tinting (to make night scene)
+    # image nightRoomTidy = im.MatrixColor(
+    #     "tidyroom bg.png",
+    #     im.matrix.tint(0.5, 0.5, 0.8))
+    #
+    # show nightRoomTidy
+    # mc "Hello"
 
-    #scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show i_n at left
-    show r_n at right
-    show e_n at center
-
-    # These display lines of dialogue.
-
-    # i "Sure, You'll get one."
-    # "She points her finger at you."
-    # i "If you manage to defeat me in \[Is-She-Kay Life\]. You have 30 days to practice."
-
-    # r "Isabelle! How are you?"
-    # i "Fine..."
-    # r "Ow man, you are such a downer!"
-    # i "{i}sigh...{/i}"
-
-    r "Alright guys! Are you ready???"
-    i "Sure."
-    e "Let's do this!"
-    r "One two-"
-
-    i "Welcome..."
-    e "Toooooooo~~"
-    r "The Board Game club!!!!~"
-
-    r "Yaaay! Good job everyone!"
-
-    # This ends the game.
+    scene tidyroom
+    mc "Yes! I'm almost there! 30 more weekdays and I'll be graduating from this university."
+    mc "..."
+    mc "It's saturday, maybe I should start making my CV so that I can look for jobs right away!"
+    scene black
+    "{i}You are writing your CV for hours.{/i}"
+    scene tidyroom
+    mc "Let's see here, Organizational Experience.... OH NO!"
+    mc "I haven't joined a single club or even participate in a seminar from the first time I got here!"
 
     return

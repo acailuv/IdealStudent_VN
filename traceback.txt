@@ -1,32 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 29, in script
-    i "OIf you manage to defeat me in [Is-She-Kay Life]. You have 30 days to practice."
-KeyError: u'Is-She-Kay Life'
+  File "game/script.rpy", line 15, in script
+    image nightRoomTidy = im.MatrixColor(
+  File "game/script.rpy", line 17, in <module>
+    im.desaturate() * im.matrix.tint(0.9, 0.0, 0.9))
+AttributeError: 'module' object has no attribute 'desaturate'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 29, in script
-    i "OIf you manage to defeat me in [Is-She-Kay Life]. You have 30 days to practice."
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\exports.py", line 1336, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\character.py", line 1126, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=True))
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\character.py", line 1115, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\substitutions.py", line 253, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'Is-She-Kay Life'
+  File "game/script.rpy", line 15, in script
+    image nightRoomTidy = im.MatrixColor(
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\ast.py", line 1011, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 17, in <module>
+    im.desaturate() * im.matrix.tint(0.9, 0.0, 0.9))
+AttributeError: 'module' object has no attribute 'desaturate'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
-Graduating in 30 Days 1.0
-Mon Aug 19 18:28:16 2019
+An Ideal Student in 30 Days! 1.0
+Sat Aug 24 10:47:36 2019
