@@ -1,3 +1,7 @@
 log.txt
 traceback.txt
 game/saves/persistent
+
+*.save
+
+game/saves/

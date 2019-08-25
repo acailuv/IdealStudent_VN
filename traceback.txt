@@ -1,26 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 15, in script
-    image nightRoomTidy = im.MatrixColor(
-  File "game/script.rpy", line 17, in <module>
-    im.desaturate() * im.matrix.tint(0.9, 0.0, 0.9))
-AttributeError: 'module' object has no attribute 'desaturate'
+After initialization, but before game start.
+  File "game/free_time.rpy", line 7, in prepare_screen
+    screen stats():
+  File "game/free_time.rpy", line 7, in prepare
+    screen stats():
+  File "game/free_time.rpy", line 9, in prepare
+    frame:
+  File "game/free_time.rpy", line 9, in prepare
+    frame:
+  File "game/free_time.rpy", line 13, in prepare
+    vbox:
+  File "game/free_time.rpy", line 13, in prepare
+    vbox:
+  File "game/free_time.rpy", line 24, in prepare
+    button:
+  File "game/free_time.rpy", line 24, in prepare
+    button:
+SyntaxError: invalid syntax (game/free_time.rpy, line 29)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 15, in script
-    image nightRoomTidy = im.MatrixColor(
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\ast.py", line 1011, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 17, in <module>
-    im.desaturate() * im.matrix.tint(0.9, 0.0, 0.9))
-AttributeError: 'module' object has no attribute 'desaturate'
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\bootstrap.py", line 314, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\main.py", line 529, in main
+    run(restart)
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\main.py", line 90, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\display\screen.py", line 919, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/free_time.rpy", line 7, in prepare_screen
+    screen stats():
+  File "game/free_time.rpy", line 7, in prepare
+    screen stats():
+  File "game/free_time.rpy", line 9, in prepare
+    frame:
+  File "game/free_time.rpy", line 9, in prepare
+    frame:
+  File "game/free_time.rpy", line 13, in prepare
+    vbox:
+  File "game/free_time.rpy", line 13, in prepare
+    vbox:
+  File "game/free_time.rpy", line 24, in prepare
+    button:
+  File "game/free_time.rpy", line 24, in prepare
+    button:
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\pyanalysis.py", line 700, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\pyanalysis.py", line 684, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\Me\Desktop\renpy-7.3.2-sdk\renpy\python.py", line 690, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/free_time.rpy, line 29)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 An Ideal Student in 30 Days! 1.0
-Sat Aug 24 10:47:36 2019
+Sun Aug 25 13:25:53 2019
