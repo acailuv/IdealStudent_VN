@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/free_time.rpy", line 26: is not terminated with a newline. (Check strings and parenthesis.)
-                        action [
+File "game/script.rpy", line 30: Line is indented, but the preceding style statement statement does not expect a block. Please check this line's indentation.
+    background Solid("#0000009B")
+    ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Sun Aug 25 13:18:23 2019
+Mon Aug 26 10:54:27 2019

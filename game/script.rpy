@@ -10,12 +10,25 @@ define mc = Character("You", color="#007bff")
 
 # initializations (class, variables, etc.)
 init python:
-    pa = False
-    oe = False
+    class Time(object):
+        def __init__(self):
+            self.t = 7
+
+        def addTime(self, n):
+            self.t = (self.t+n)%24
+            return self.getTime()
+
+        def getTime(self):
+            return str(self.t) + ":00"
 
 # The game starts here.
 
 label start:
+
+    # Custom Styles
+    # /////////////
+    style screen_background:
+        background Solid("#0000009B")
 
     # Example screen tinting (to make night scene)
     # ////////////////////////////////////////////
@@ -67,5 +80,24 @@ label start:
     #             jump ch
     #
     # scene tidyroom
+
+    $ t = Time()
+    $ tm = t.getTime()
+    screen clock:
+        modal False
+        frame:
+            style "screen_background"
+            xalign 0.5
+            yalign 0.0
+
+            xsize 150
+            ysize 50
+
+            text "[tm]" xalign 0.5 yalign 0.5
+
+    show screen clock
+    scene classroom2
+    "test"
+
     $ ft = "free_time"
     call expression ft from _call_expression
