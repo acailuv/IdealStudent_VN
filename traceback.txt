@@ -1,32 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 103, in script call
-  File "game/free_time.rpy", line 86, in script
+  File "game/script.rpy", line 108, in script call
+    call expression ft from _call_expression
+  File "game/free_time.rpy", line 107, in script
     "What should I do...."
-  File "game/free_time.rpy", line 36, in execute
-    screen actions():
-  File "game/free_time.rpy", line 36, in execute
-    screen actions():
-  File "game/free_time.rpy", line 37, in execute
+  File "game/free_time.rpy", line 3, in execute
+    screen stats():
+  File "game/free_time.rpy", line 3, in execute
+    screen stats():
+  File "game/free_time.rpy", line 5, in execute
     frame:
-  File "game/free_time.rpy", line 48, in execute
+  File "game/free_time.rpy", line 17, in execute
     vbox:
-  File "game/free_time.rpy", line 51, in execute
-    hbox:
-  File "game/free_time.rpy", line 53, in execute
-    vbox:
-  File "game/free_time.rpy", line 55, in execute
-    button:
-  File "game/free_time.rpy", line 55, in keywords
-    button:
-AttributeError: 'unicode' object has no attribute 'getTime'
+  File "game/free_time.rpy", line 20, in execute
+    text "Stamina ([stamina]/100)" size 25
+NameError: Name 'stamina' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 103, in script call
-  File "game/free_time.rpy", line 86, in script
+  File "game/script.rpy", line 108, in script call
+    call expression ft from _call_expression
+  File "game/free_time.rpy", line 107, in script
     "What should I do...."
   File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
     renpy.exports.say(who, what, *args, **kwargs)
@@ -58,26 +54,31 @@ Full traceback:
     self.update()
   File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\display\screen.py", line 625, in update
     self.screen.function(**self.scope)
-  File "game/free_time.rpy", line 36, in execute
-    screen actions():
-  File "game/free_time.rpy", line 36, in execute
-    screen actions():
-  File "game/free_time.rpy", line 37, in execute
+  File "game/free_time.rpy", line 3, in execute
+    screen stats():
+  File "game/free_time.rpy", line 3, in execute
+    screen stats():
+  File "game/free_time.rpy", line 5, in execute
     frame:
-  File "game/free_time.rpy", line 48, in execute
+  File "game/free_time.rpy", line 17, in execute
     vbox:
-  File "game/free_time.rpy", line 51, in execute
-    hbox:
-  File "game/free_time.rpy", line 53, in execute
-    vbox:
-  File "game/free_time.rpy", line 55, in execute
-    button:
-  File "game/free_time.rpy", line 55, in keywords
-    button:
-  File "<screen language>", line 59, in <module>
-AttributeError: 'unicode' object has no attribute 'getTime'
+  File "game/free_time.rpy", line 20, in execute
+    text "Stamina ([stamina]/100)" size 25
+  File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\text\text.py", line 1479, in __init__
+    self.set_text(text, scope, substitute)
+  File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\text\text.py", line 1598, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\substitutions.py", line 253, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+  File "C:\Users\Relic\Desktop\renpy-7.3.2-sdk\renpy\substitutions.py", line 212, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'stamina' is not defined.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 An Ideal Student in 30 Days! 1.0
-Mon Aug 26 11:32:08 2019
+Mon Aug 26 12:39:48 2019

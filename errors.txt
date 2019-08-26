@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: Line is indented, but the preceding style statement statement does not expect a block. Please check this line's indentation.
-    background Solid("#0000009B")
-    ^
+File "game/script.rpy", line 110: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                style "screen_background
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Aug 26 10:54:27 2019
+Mon Aug 26 13:12:44 2019

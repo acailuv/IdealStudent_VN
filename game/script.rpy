@@ -10,6 +10,15 @@ define mc = Character("You", color="#007bff")
 
 # initializations (class, variables, etc.)
 init python:
+    # player 'currencies'
+    intelligence = 0
+    isk = 0
+
+    # player status
+    stamina = 40
+    mental_health = 40
+
+    # Time object for clock
     class Time(object):
         def __init__(self):
             self.t = 7
@@ -95,7 +104,20 @@ label start:
 
             text "[tm]" xalign 0.5 yalign 0.5
 
+    screen currency:
+        modal False
+        frame:
+            style "screen_background"
+            xalign 0.5
+            yalign 0.06
+            vbox:
+                text "Intelligence Pts." xalign 0.5 size 25
+                text "[intelligence]" xalign 0.5 size 20
+                text "Is-She-Kay Pts." xalign 0.5 size 25
+                text "[isk]" xalign 0.5 size 20
+
     show screen clock
+    show screen currency
     scene classroom2
     "test"
 
