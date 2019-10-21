@@ -2,33 +2,34 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
+define dis = Dissolve(0.5)
 define i = Character("Isabelle")
 define r = Character("Rika", color="#ff8000")
 define e = Character("Elizabeth", color="#ff8aef")
 define mc = Character("You", color="#007bff")
-
+define t = Character("Teacher")
+define suc = Character("Success")
+define fail = Character("Fail")
 # initializations (class, variables, etc.)
 init python:
     # player 'currencies'
     intelligence = 0
     isk = 0
-
     # player status
     stamina = 40
     mental_health = 40
-
-    # Time object for clock
-    class Time(object):
-        def __init__(self):
-            self.t = 7
-
-        def addTime(self, n):
-            self.t = (self.t+n)%24
-            return self.getTime()
-
-        def getTime(self):
-            return str(self.t) + ":00"
+    # tm is variable for storing time, initialized here
+    tm = 7
+    day = 1
+    normal_days_count = 0
+    exam_days_count = 0
+    # so player cannot keep clicking on missed class
+    click = 0
+    # click2 so player forced to press missed class
+    click2 = 0
+    score_player = 0
+    score_opponent = 0
+    finalshowdown = 0
 
 # The game starts here.
 
@@ -90,8 +91,6 @@ label start:
     #
     # scene tidyroom
 
-    $ t = Time()
-    $ tm = t.getTime()
     screen clock:
         modal False
         frame:
@@ -102,24 +101,39 @@ label start:
             xsize 150
             ysize 50
 
-            text "[tm]" xalign 0.5 yalign 0.5
+
+            text "[tm]"+":00" xalign 0.5 yalign 0.5
+
+    screen day:
+        modal False
+        frame:
+            style "screen_background"
+            xalign 0.5
+            yalign 0.06
+
+            text "Day [day]" xalign 0.75 yalign 0.0
 
     screen currency:
         modal False
         frame:
             style "screen_background"
             xalign 0.5
-            yalign 0.06
+            yalign 0.12 #previous value = 0.06
             vbox:
                 text "Intelligence Pts." xalign 0.5 size 25
                 text "[intelligence]" xalign 0.5 size 20
                 text "Is-She-Kay Pts." xalign 0.5 size 25
                 text "[isk]" xalign 0.5 size 20
+                text "GPA" xalign 0.5 size 25
+                text "[GPA]" xalign 0.5 size 20
+
 
     show screen clock
+    $ fd = "first_day"
+    call expression fd from call1
+
     show screen currency
-    scene classroom2
-    "test"
+    show screen clock
 
     $ ft = "free_time"
     call expression ft from _call_expression

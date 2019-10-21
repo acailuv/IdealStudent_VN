@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 110: is not terminated with a newline. (Check strings and parenthesis.)
+File "game/showdown.rpy", line 880: is not terminated with a newline. (Check strings and parenthesis.)
 (Perhaps you left out a " at the end of the first line.)
-                style "screen_background
+                 simple dagger with 0% critical chance. You made it, though."
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Aug 26 13:12:44 2019
+Mon Oct 21 14:07:07 2019
