@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/showdown.rpy", line 880: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                 simple dagger with 0% critical chance. You made it, though."
+File "game/exams.rpy", line 50: expected statement.
+    GPA = 0
+        ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Oct 21 14:07:07 2019
+Tue Oct 22 20:49:30 2019

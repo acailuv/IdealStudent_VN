@@ -4,7 +4,7 @@
 # name of the character.
 define dis = Dissolve(0.5)
 define i = Character("Isabelle")
-define r = Character("Rika", color="#ff8000")
+define rik = Character("Rika", color="#ff8000")
 define e = Character("Elizabeth", color="#ff8aef")
 define mc = Character("You", color="#007bff")
 define t = Character("Teacher")

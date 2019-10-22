@@ -10,7 +10,7 @@ label showdown:
     $ score_opponent = 0
     show screen score
     $ total = 100
-
+    $ tm = 17
     if day == 10:
         $ opponent = 'Elizabeth'
         jump showdown_elizabeth
@@ -41,9 +41,14 @@ label success:
             jump success
 label showdown_elizabeth:
     show classroom with dis
+    show e_flirt with dis:
+        xalign 0.5
+        yalign 1.0
     e"Hey..."
     e"Let's play!"
+    hide e_flirt with dis
     hide classroom
+    ###
     $ nullguard = 0
     show city with dis
     "Stage 1"
@@ -354,10 +359,21 @@ label showdown_elizabeth:
     label elizabeth_ending:
         $ chance = renpy.random.randint(1,10)
         # chance "passed" to free time
-        hide screen score
-        hide city
+        hide screen score with dis
+        hide city with dis
+        show classroom with dis
         if (score_player > score_opponent):
+            show e_lose with dis:
+                xalign 0.5
+                yalign 1.0
             e"I lost, even with my overpowered character"
+            mc"Hey? What's the matter why so down it was just a game"
+            hide e_lose with dis
+            show e_sad with dis:
+                xalign 0.6
+                yalign 1.0
+            e"You don't get it"
+            e"*Snivel*"
             e"When I was a kid I wore a thick pair of glasses to school"
             e"I would always read comics and enjoyed collecting them"
             e"When I was in fifth grade, my friends would make fun of me"
@@ -368,16 +384,42 @@ label showdown_elizabeth:
             e"This is why I keep overthinking..."
             e"I don't want people to know I love manga"
             e"I just couldn't take it, so I became someone else in public"
+            e"I can't believe I'm telling you this"
+            mc"It's fine Elizabeth, I'm happy you told the truth"
+            e"You really--"
+            mc"Yeah anytime!"
+            hide e_sad with dis
+            show e_happy with dis:
+                xalign 0.7
+                yalign 1.0
+            e"Thanks hehe"
+            e"You know we--"
+            e"should...go-"
+            mc"back?"
+            e"Uhh yeah!"
+            e"It's getting kinda late"
             "You gained 2000 Is-She-Kay points for winning"
+            hide e_happy with dis
             $ isk = isk + 2000
         elif (score_player < score_opponent):
             e"Better luck next time"
         jump free_time
 label showdown_rika:
+    show classroom with dis
+    show r with dis:
+        xalign 0.5
+        yalign 1.0
+    rik"Hiya!"
+    rik"It's time to face me!"
+    show r_cheerful with dis:
+        xalign 0.5
+        yalign 1.0
+    hide classroom
+    ####
     $ minor_injury = 0
     $ no_fuel = 0
     $ damaged_ship = 0
-    $ score_opponent = renpy.random.randint(9,12)
+    $ score_opponent = renpy.random.randint(9,10)
     show space with dis
     "Stage 1"
     $ renpy.pause(0.5)
@@ -400,7 +442,6 @@ label showdown_rika:
             jump stage_2_rika
         else:
             fail"You rolled [chance] out of [total] you needed a roll greater than 90"
-            # not yet reroll
             "The merchant punched you in the gut and you fell to the ground, the whole space bar laugh at your pathetic being."
             if (isk<1000):
                 $ score_player = score_player -  1
@@ -609,32 +650,55 @@ label showdown_rika:
 
 
     label rika_ending:
+        show screen classroom with dis
+        show r with dis:
+            xalign 0.75
+            yalign 1.0
         if (score_player>score_opponent):
-            r"That was close!"
-            r"If only I did this instead of that!"
+            show r_surprise with dis:
+                xalign 0.6
+                yalign 1.0
+            rik"That was close!"
+            rik"If only I did this instead of that!"
             mc"I still won though"
-            r"You're right!"
-            r"Gosh aren't you adorable"
+            hide r_surprise with dis
+            show r_happy with dis:
+                xalign 0.4
+                yalign 1.0
+            rik"You're right!"
+            rik"Gosh aren't you adorable"
             mc"How are you like this?"
-            r"...."
-            r"You know two years ago I always smiled"
-            r"I was a very cheerful person"
-            r"Just full of optimism"
-            r"Five years ago I was a decently happy and kind middle schooler"
-            r"I enjoyed cheering up my friends"
-            r"I'd always tell them it was okay"
-            r"Nine years ago, I was a loner"
-            r"No one wanted to play with me for hide and seek"
-            "Even though I'm sad I kept it to myself"
-            "Until the rain comes down"
-            "I did so because no one would notice me crying"
+            rik"...."
+            hide r_happy with dis
+            show r_shy with dis:
+                xalign 0.5
+                yalign 1.0
+            rik"You know two years ago I always smiled"
+            rik"I was a very cheerful person"
+            rik"Just full of optimism"
+            rik"Five years ago I was a decently happy and kind middle schooler"
+            rik"I enjoyed cheering up my friends"
+            rik"I'd always tell them it was okay"
+            rik"Nine years ago, I was a loner"
+            rik"No one wanted to play with me for hide and seek"
+            rik"Even though I'm sad I kept it to myself"
+            rik"Until the rain comes down"
+            rik"I did so because no one would notice me crying"
             "You got 2000 Is-She-Kay points"
+            hide r_shy with dis
             $ isk = isk + 3000
         elif (score_player < score_opponent):
-            r"Hope you won't lose against Isabelle!"
-            r"Though I'm not sure at this rate"
+            show r_happy with dis:
+                xalign 0.5
+                yalign 1.0
+            rik"That was easy!"
+            rik"Best of luck for your final showdown with Isabelle"
+            mc"Sigh"
         else:
-            r"Not bad hihi!"
+            show r with dis:
+                xalign 0.5
+                yalign 1.0
+            rik"Not bad hihi!"
             "You got 500 Is-She-Kay points"
             $ isk = isk + 500
         $ chance = renpy.random.randint(1,10)
@@ -644,6 +708,20 @@ label showdown_rika:
         jump free_time
 
 label showdown_isabelle:
+    show classroom with dis
+    show i with dis:
+        xalign 0.5
+        yalign 1.0
+    i"Hmph"
+    i"This is your final showdown"
+    hide i with dis
+    show i_smile with dis:
+        xalign 0.5
+        yalign 1.0
+    i"Prepare to lose"
+    hide i_smile with dis
+    hide classroom
+    ####
     $ los = 0
     $ destiny = 0
     $ dg = 1
@@ -1027,14 +1105,25 @@ label showdown_isabelle:
 
 
     label isabelle_ending:
-        hide cave
+        hide cave with dis
+        show classroom with dis
         if (score_player > score_opponent):
             jump isabelle_win
         elif (score_player <= score_opponent):
             jump isabelle_lose
         label isabelle_win:
+            show i_lost with dis:
+                xalign 0.1
+                yalign 1.0
             i"...."
             i"I lost"
+            mc"Tell me... why are you so cold?"
+            hide i_lost with dis
+            show i_sad with dis:
+                xalign 0.4
+                yalign 1.0
+            i"....."
+            i"Hmm"
             i"Since I was a kid I never talked to boys because I went to an all-female school"
             i"The first time I went to university... noboy would talk to me"
             i"I was seen as a cold person that was not interested with anyone"
@@ -1042,11 +1131,35 @@ label showdown_isabelle:
             i"All seemed well, but.. they got bored of me"
             i"The reason I'm cold is because I don't want people to think I'm boring"
             i"Only the Board Game Club members never get bored of me"
+            mc"Well..."
+            mc"I don't find you boring"
+            i"You're lying"
+            mc"Believe it or not you're quite interesting"
+            mc"In a different way"
+            i"...."
+            hide i_sad with dis
+            show i_lost with dis:
+                xalign 0.6
+                yalign 1.0
+            i"Wow! No one has ever said that to me"
             i"Here take the certificate you deserve it"
             "You received the participation certificate from Isabelle!"
+            i"I wished I could give you more than that.."
+            mc"We could..."
+            mc"You know.. after all this"
+            hide i_lost with dis
+            show i_smile with dis:
+                xalign 0.7
+                yalign 1.0
+            i"Hmmph I'll think about it"
+            hide i_smile with dis
             $ finalshowdown = 1
             jump endings
         label isabelle_lose:
+            show i_angry with dis:
+                xalign 0.5
+                yalign 1.0
             i"Hmmph"
             i"That was too easy, you're pathetic"
+            hide i_angry with dis
             jump endings

@@ -32,7 +32,9 @@ label choice_perf:
 
     "You got a 100 on your exam"
     $ intelligence = intelligence - perf_score_cost
-    $ GPA = GPA + 0.2
+    $ GPA = (GPA + 4)/2
+    if GPA > 4:
+        $ GPA = 4
     jump choice_done
 
 label choice_pass:
@@ -43,7 +45,9 @@ label choice_pass:
 
 label choice_fail:
     "You failed your exam"
-    $ GPA = GPA - 0.2
+    $ GPA = (GPA + 2)/2
+    if GPA < 0:
+        $ GPA = 0
     jump choice_done
 
 label choice_done:

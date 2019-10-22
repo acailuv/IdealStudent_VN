@@ -27,7 +27,7 @@ label first_day:
     show r with dis:
         xalign 0.75
         yalign 1.0
-    r"Hello my name is Rika nice to meet you!"
+    rik"Hello my name is Rika nice to meet you!"
     show e with dis:
         xalign 0.5
         yalign 1.0
@@ -38,8 +38,9 @@ label first_day:
     mc"Thanks for letting me join this late"
     mc"I am just wondering if I will get a participation certificate or not.
     Since I am joining this late. I really hope you are kind enough to give me that, You see-"
-    show i:
-        xalign 0.25
+    hide i with dis
+    show i_smile with dis:
+        xalign 0.2
         yalign 1.0
     i"Sure, you’ll get one,"
     i "If you beat me at this Is-She-Kay Life board game. You have 30 days to practice"
@@ -48,14 +49,14 @@ label first_day:
     mc"*Sigh*"
     i"Since we don't have much time every 10 days you will face either Rika or
     Elizabeth"
-
+    hide i_smile with dis
+    hide e with dis
+    hide r with dis
     #Transition to free_time
     $ tm = 17
 
     show tidyroom with dis
-    hide i
-    hide e
-    hide r
+
     mc"(Alright I'm back home, looks like I really have to practice playing Is-She-Kay Life)"
     mc"(But I have to make sure my GPA doesn't drop... )"
     mc"(I've got classes at 7:00am tomorrow)"
