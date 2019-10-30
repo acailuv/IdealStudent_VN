@@ -1,5 +1,5 @@
 label exams:
-    show classroom2 with dis
+    show classroom2 with dis_slow
     hide screen actions
     hide classroom
     hide tidyroom

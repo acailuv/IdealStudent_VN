@@ -1,70 +1,47 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'images/smile.png'>:
-  File "game/script.rpy", line 139, in script call
-    call expression ft from _call_expression
-  File "game/free_time.rpy", line 332, in script
-    mc"What should I do...."
-IOError: Couldn't find file 'images/smile.png'.
+Compiling ATL code at game/first_day.rpy:64
+  File "game/script.rpy", line 141, in script call
+    call expression fd from call1
+  File "game/first_day.rpy", line 62, in script
+    show r_neutral with move:
+NameError: name 'r_align' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 139, in script call
-    call expression ft from _call_expression
-  File "game/free_time.rpy", line 332, in script
-    mc"What should I do...."
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\exports.py", line 1336, in say
-    who(what, *args, **kwargs)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\character.py", line 1139, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\character.py", line 842, in do_display
-    **display_args)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ui.py", line 295, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\core.py", line 2699, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\core.py", line 3191, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\core.py", line 2091, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 546, in renpy.display.render.render_screen
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 154, in renpy.display.render.render
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 154, in renpy.display.render.render
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 154, in renpy.display.render.render
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\image.py", line 500, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\image.py", line 306, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 154, in renpy.display.render.render
-  File "render.pyx", line 247, in renpy.display.render.render
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\im.py", line 584, in render
-    return cache.get(self, render=True)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\im.py", line 266, in get
-    surf = image.load()
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\im.py", line 629, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'images/smile.png'.
+  File "game/script.rpy", line 141, in script call
+    call expression fd from call1
+  File "game/first_day.rpy", line 62, in script
+    show r_neutral with move:
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 1181, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 1151, in show_imspec
+    atl=atl)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\exports.py", line 717, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\core.py", line 1070, in add
+    thing._show()
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1048, in _show
+    super(ATLTransform, self)._show()
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1014, in _show
+    self.update_state()
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1036, in update_state
+    fr = self.execute(self, self.st, self.at)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 521, in execute
+    block = self.compile()
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 489, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 684, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 932, in compile
+    value = ctx.eval(expr)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 246, in eval
+    return eval(expr, renpy.store.__dict__, self.context)  # @UndefinedVariable
+  File "<string>", line 1, in <module>
+NameError: name 'r_align' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 An Ideal Student in 30 Days! 1.0
-Tue Oct 22 17:22:00 2019
+Wed Oct 30 09:14:18 2019

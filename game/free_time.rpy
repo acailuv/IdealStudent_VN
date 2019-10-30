@@ -324,7 +324,7 @@ label free_time:
             #     ]
     $ chance = renpy.random.randint(1,10)
 
-    show tidyroom with dis
+    show tidyroom with dis_slow
     show screen day
     show screen stats
     show screen actions

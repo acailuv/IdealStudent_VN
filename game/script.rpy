@@ -2,7 +2,8 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-define dis = Dissolve(0.5)
+define dis_slow = Dissolve(0.5)
+define dis_fast = Dissolve(0.1)
 define i = Character("Isabelle")
 define rik = Character("Rika", color="#ff8000")
 define e = Character("Elizabeth", color="#ff8aef")
@@ -30,6 +31,15 @@ init python:
     score_player = 0
     score_opponent = 0
     finalshowdown = 0
+    # Elizabeth y align
+    e_yalign = -0.5
+    # Rika y align
+    r_yalign = -1.25
+    # Isabelle y align
+    i_yalign = -0.5
+
+    #
+
 
 # The game starts here.
 
