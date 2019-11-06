@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/showdown.rpy", line 803: choice menuitem expects a non-empty block.
-    "Yes":
-          ^
+File "game/showdown.rpy", line 1020: end of line expected.
+    rik"Why hello there"s
+                        ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Sun Oct 27 22:21:17 2019
+Mon Nov 04 10:24:24 2019

@@ -45,7 +45,7 @@ label choice_pass:
 
 label choice_fail:
     "You failed your exam"
-    $ GPA = (GPA + 2)/2
+    $ GPA = (GPA + 2)/1.75
     if GPA < 0:
         $ GPA = 0
     jump choice_done

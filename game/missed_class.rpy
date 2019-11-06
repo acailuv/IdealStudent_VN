@@ -4,8 +4,8 @@ label missed_exam_day:
     "You misssed an exam"
     "Your GPA goes down"
     $ tm = 17
-    $ GPA = GPA - 0.3
-    if (GPA < 0):
+    $ GPA = (GPA + 2)/2
+    if GPA < 0:
         $ GPA = 0
     jump free_time
 

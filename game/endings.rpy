@@ -1,7 +1,7 @@
 
 label endings:
-    hide actions
-    hide stats
+    hide screen actions
+    hide screen stats
     hide classroom2
     hide classroom
     hide tidyroom
@@ -10,7 +10,7 @@ label endings:
     elif GPA >= 3 and finalshowdown == 1:
         jump sociableScholar
     elif GPA >= 3 and finalshowdown == 0:
-        jump notSociableScholarc
+        jump notSociableScholar
     elif GPA < 3 and finalshowdown == 1:
         jump sociableNotScholar
     else:

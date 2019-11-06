@@ -64,7 +64,7 @@ label free_time:
                                 elif chance <= 3:
                                     action [
                                     SetVariable("click", click + 1),
-                                    SetVariable("exam_days_count", normal_days_count + 1),
+                                    SetVariable("exam_days_count", exam_days_count + 1),
                                     Jump("missed_exam_day"), Return(True)]
                             elif stamina<=20 and mental_health<=20 and tm + 7 < 24:
                                 action [
@@ -113,7 +113,7 @@ label free_time:
                                 elif chance <= 3:
                                     action [
                                     SetVariable("click", click + 1),
-                                    SetVariable("exam_days_count", normal_days_count + 1),
+                                    SetVariable("exam_days_count", exam_days_count + 1),
                                     Jump("missed_exam_day"), Return(True)]
                             elif stamina<=90 and mental_health<=85 and tm + 1 < 24:
                                 action [
@@ -215,7 +215,7 @@ label free_time:
                                 elif chance <= 3:
                                     action [
                                     SetVariable("click", click + 1),
-                                    SetVariable("exam_days_count", normal_days_count + 1),
+                                    SetVariable("exam_days_count", exam_days_count + 1),
                                     Jump("missed_exam_day"), Return(True)]
                             elif stamina>=30 and mental_health>=30 and tm + 3 < 24:
                                 action [
@@ -253,7 +253,7 @@ label free_time:
                                 elif chance <= 3:
                                     action [
                                     SetVariable("click", click + 1),
-                                    SetVariable("exam_days_count", normal_days_count + 1),
+                                    SetVariable("exam_days_count", exam_days_count + 1),
                                     Jump("missed_exam_day"), Return(True)]
                             elif stamina >= 10 and mental_health >= 30 and tm + 3 < 24:
                                 action [

@@ -32,15 +32,16 @@ init python:
     score_opponent = 0
     finalshowdown = 0
     # Elizabeth y align
-    e_yalign = -0.5
+    e_yalign = -1.2
     # Rika y align
-    r_yalign = -1.25
+    r_yalign = -1.35
     # Isabelle y align
-    i_yalign = -0.5
+    i_yalign = -0.75
 
-    #
-
-
+    # Story master y modifier, add variable to default yalign
+    sm_ymodifier = -0.5
+    # Position character to left
+    sm_x = -.05
 # The game starts here.
 
 label start:

@@ -1,47 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/first_day.rpy:64
-  File "game/script.rpy", line 141, in script call
-    call expression fd from call1
-  File "game/first_day.rpy", line 62, in script
-    show r_neutral with move:
-NameError: name 'r_align' is not defined
+While running game code:
+  File "game/script.rpy", line 150, in script call
+    call expression ft from _call_expression
+  File "game/endings.rpy", line 13, in script
+    jump notSociableScholarc
+ScriptError: could not find label 'notSociableScholarc'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 141, in script call
-    call expression fd from call1
-  File "game/first_day.rpy", line 62, in script
-    show r_neutral with move:
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 1181, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 1151, in show_imspec
-    atl=atl)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\exports.py", line 717, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\core.py", line 1070, in add
-    thing._show()
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1048, in _show
-    super(ATLTransform, self)._show()
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1014, in _show
-    self.update_state()
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\display\transform.py", line 1036, in update_state
-    fr = self.execute(self, self.st, self.at)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 521, in execute
-    block = self.compile()
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 489, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 684, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 932, in compile
-    value = ctx.eval(expr)
-  File "C:\Program Files\renpy-7.3.2-sdk\renpy\atl.py", line 246, in eval
-    return eval(expr, renpy.store.__dict__, self.context)  # @UndefinedVariable
-  File "<string>", line 1, in <module>
-NameError: name 'r_align' is not defined
+  File "game/script.rpy", line 150, in script call
+    call expression ft from _call_expression
+  File "game/endings.rpy", line 13, in script
+    jump notSociableScholarc
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\ast.py", line 1695, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Program Files\renpy-7.3.2-sdk\renpy\script.py", line 894, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'notSociableScholarc'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 An Ideal Student in 30 Days! 1.0
-Wed Oct 30 09:14:18 2019
+Wed Nov 06 08:30:58 2019
