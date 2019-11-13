@@ -18,7 +18,7 @@ define config.name = _("An Ideal Student in 30 Days!")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -30,6 +30,18 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+You work hard and try to maintain your highest GPA possible. You don’t really care about joining a club or devote your time to join in an organization. “It can wait.” You thought to yourself. This keeps going on and on until you are 30 days away from graduating. “What should I do?!” You frantically thought to yourself before you go to your university.
+
+You arrived at uni, looked at the notice board to find any available clubs that is still recruiting considering you are this late in your uni’s journey. All clubs are full and not looking for new members, except one club: “The Board Game Club”. You hurried to the classroom they gathered in and decided to join them immediately.
+
+You open the sliding door and see four members there. You asked them if you could join their club and a black-haired woman who seems to be the President of that club said yes. “Thanks for letting me join this late,” You said to the President of that club, “I am just wondering if I will get a participation certificate or not. Since I am joining this late. I really hope you are kind enough to give me that, You see-” You got interrupted before you can finish your sentence.
+
+“Sure, you’ll get one,” Said the Board Game Club leader, she lifts her hand, points right at you and said, “If you beat me at this [Is-She-Kay Life] board game. You have 30 days to practice.”
+You stood there is disbelief, unable to fathom the situation. You said, “You are kidding right? I don’t even know how to play this game!” You stood there trying to convince the club leader to give you the certificate when you graduate as if you are trying to convince a brick wall. She does not listen to you whatever you do.
+
+There is only one thing left to do. You have to beat Isabelle, the leader of the board game club without sacrificing your GPA. Game On!
+
+As You progress through the game, fragments of the past about the people you meet in the board game club will reveal itself. Be sure NOT to miss out!
 """)
 
 
