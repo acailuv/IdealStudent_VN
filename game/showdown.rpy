@@ -19,6 +19,8 @@ label showdown:
     hide classroom
     hide tidyroom
     hide screen stats
+    stop music fadeout 1.0
+    play music bgm1
     $ score_player = 0
     $ score_opponent = 0
     show screen score
@@ -47,6 +49,8 @@ screen score():
 
 label showdown_elizabeth:
     show classroom with dis_slow
+    stop music fadeout 1.0
+    play music bgm2
     show e_neutral2 with dis_fast:
         xalign 0.3
         yalign e_yalign
@@ -86,6 +90,8 @@ label showdown_elizabeth:
     hide e_neutral with dis_fast
     hide classroom
     ###
+    stop music fadeout 1.0
+    play music bgm5
     $ nullguard = 0
     show city with dis_slow
     show i_neutral3 with dis_fast:
@@ -123,6 +129,7 @@ label showdown_elizabeth:
         $ chance = renpy.random.randint(1,total)
         "Rolling..."
         $ renpy.pause(0.5)
+        play sound se2
         # 50 % chance for player
         if (chance > total / 2):
             suc"You rolled [chance] out of [total] you needed a roll greater than 50"
@@ -196,6 +203,7 @@ label showdown_elizabeth:
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
         "Rolling..."
+        play sound se2
         # 60 % chance for player
         if (chance > 60):
             suc"You rolled [chance] out of [total] you needed a roll greater than 60"
@@ -258,6 +266,7 @@ label showdown_elizabeth:
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
         "Rolling..."
+        play sound se2
         if (chance > 20 ):
             # 80 % chance for player
             suc"You rolled [chance] out of [total] you needed a roll greater than 20"
@@ -345,6 +354,7 @@ label showdown_elizabeth:
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
         "Rolling..."
+        play sound se2
         if (chance > 50):
             suc"You rolled [chance] out of [total] you needed a roll greater than 50"
             i"Thinking that the final boss should have some kind of shield. You successfully made a
@@ -360,6 +370,7 @@ label showdown_elizabeth:
             e"Ok *fingers crossed*"
             jump high_tech_choice_5
         else:
+            fail"You rolled [chance] out of [total] you needed a roll greater than 50"
             i"Thinking that the final boss should have some kind of shield. Your adaptive
             AI can’t seem to find a critical point of modelling to make your gadget a reality."
             i"Just an advice loser, I'd use all my re-rolls here"
@@ -455,6 +466,7 @@ label showdown_elizabeth:
         i"Now both players planning on how to fight the boss's commander"
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         "Rolling..."
         if (chance > 90):
             suc"You rolled [chance] out of [total] you needed a roll greater than 90"
@@ -522,10 +534,9 @@ label showdown_elizabeth:
         i"Next round"
         i"Now both players are meeting the boss's commander"
         $ renpy.pause(0.5)
-        menu:
-            "Roll":
-                $ chance = renpy.random.randint(1,total)
+        $ chance = renpy.random.randint(1,total)
         "Rolling..."
+        play sound se2
         if (chance > 90):
             suc"You rolled [chance] out of [total] you needed a roll greater than 90"
             i"You successfully executed the sacred Dragon Waterfall Strike technique on one of the commanders."
@@ -608,6 +619,7 @@ label showdown_elizabeth:
         i"You and Elizabeth stayed there a while, preparing for what comes next."
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 75):
             suc"You rolled [chance] out of [total] you needed a roll greater than 75"
             i"You feel enlightened and your strength has increased tenfold"
@@ -636,6 +648,7 @@ label showdown_elizabeth:
         i"It will depend upon whether you can use the Ultimate Sky-Dragon Judgement Move"
         $ renpy.pause(0.5)
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 95):
             suc"You rolled [chance] out of [total] you needed a roll greater than 95"
             hide i_neutral2
@@ -686,6 +699,8 @@ label showdown_elizabeth:
         hide screen score with dis_slow
         hide city with dis_slow
         show classroom with dis_slow
+        stop music fadeout 1.0
+        play music bgm2
         show i_neutral with dis_slow:
             xalign 0.5
             yalign i_yalign
@@ -716,19 +731,23 @@ label showdown_elizabeth:
             hide i_neutral
             hide screen score
             hide classroom
+            stop music fadeout 1.0
             "You unlocked Elizabeth's past"
             "Would you like to check it?"
             menu:
                 "Yes":
+                    play music bgm10
                     "There was a young girl. Her eyes are not perfect so she wears a thick pair of glasses whenever she goes to school."
                     "She also likes reading comics and collecting them, too. When she was in fifth grade, her friends make fun of her because she wears glasses and her twin ponytails."
                     "They called her a nerd because she loves to read comic books. This goes on until she was in middle school."
                     "When she was in high school, she completely changed her appearance even though she feels uncomfortable doing it. That is why she often overthinks how she looks in public."
                     "She doesn't even want people to know that she likes to read manga. She replaced her thick glasses with a pair of contact lenses and start living as another person when she is in public."
+                    stop music fadeout 1.0
                     jump free_time
                 "Continue":
                     jump free_time
         elif (score_player < score_opponent):
+            play sound se5
             i"Heh.. as expected the loser loses"
             e"Well he just started playing"
             i"That's a lame excuse"
@@ -743,6 +762,8 @@ label showdown_elizabeth:
             hide r_laugh
             hide i_neutral
             hide e_neutral
+            stop music fadeout 1.0
+            play music bgm1
             jump free_time
         else:
             hide e_neutral
@@ -765,6 +786,8 @@ label showdown_elizabeth:
             jump free_time
 label showdown_rika:
     show classroom with dis_slow
+    stop music fadeout 1.0
+    play music bgm2
     show r_ready with dis_slow:
         xalign 0.5
         yalign r_yalign
@@ -779,6 +802,8 @@ label showdown_rika:
     i"In this showdown both me and Elizabeth will be the story master"
 
     hide classroom
+    stop music fadeout 1.0
+    play music bgm6
     ####
     $ minor_injury = 0
     $ no_fuel = 0
@@ -892,6 +917,7 @@ label showdown_rika:
 
     label stage_3_rika_damaged_ship:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 90):
             suc"You rolled [chance] out of [total] you needed a roll greater than 90"
             i"Got through the wormhole safely"
@@ -918,6 +944,7 @@ label showdown_rika:
 
     label stage_3_rika_no_fuel:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 90):
             suc"You rolled [chance] out of [total] you needed a roll greater than 90"
             i"You had just enough fuel to get to your destination"
@@ -962,6 +989,7 @@ label showdown_rika:
 
     label stage_4_rika_minor_injury:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 90):
             suc"You rolled [chance] out of [total] you needed a roll greater than 90"
             i"You blast everyone that goes in your way and get your hand on the “Money Maker”"
@@ -988,6 +1016,7 @@ label showdown_rika:
 
     label stage_4_rika_no_injury:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 10):
             suc"You rolled [chance] out of [total] you needed a roll greater than 10"
             i"You blast everyone that goes in your way and get your hand on the “Money Maker”"
@@ -1050,6 +1079,7 @@ label showdown_rika:
 
     label stage_5_rika_minor_injury:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         i"Elizabeth take it from here"
         i"I can't be the Story Master with this idi-"
         "How many times do I have to say it Isabelle"
@@ -1081,6 +1111,7 @@ label showdown_rika:
 
     label stage_5_rika_no_injury:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         i"Elizabeth take it from here"
         i"I can't be the Story Master with this idi-"
         "How many times do I have to say it Isabelle"
@@ -1119,6 +1150,8 @@ label showdown_rika:
         hide e_neutral2
         hide space
         show classroom with dis_slow
+        stop music fadeout 1.0
+        play music bgm2
         show e_neutral with dis_slow:
             xalign 0.5
             yalign e_yalign - 1.0
@@ -1143,6 +1176,7 @@ label showdown_rika:
             rik"All the best against Isabelle!"
             "You got 3000 Is-She-Kay points"
             $ isk = isk + 3000
+            stop music fadeout 1.0
             "Rika's story unlocked"
             "Would you like to open it?"
             hide classroom
@@ -1151,6 +1185,7 @@ label showdown_rika:
             hide r_smile
             menu:
                 "Yes":
+                    play music bgm10
                     "Two years ago she was a very cheerful high schooler. She smiled all the time. She sees everything from a positive point of view."
                     "Five years ago, she was a decently happy and kind  middle schooler. She likes to cheer up her friends when in need and tell them that it was all okay."
                     "Nine Years ago, she was a lonely little girl that no one likes. She is left alone playing at the park when the whole class played hide and seek at recess."
@@ -1159,6 +1194,7 @@ label showdown_rika:
                     # chance "passed" to free time
                     hide screen score
                     hide space
+                    stop music fadeout 1.0
                     jump free_time
                 "Continue":
                     $ chance = renpy.random.randint(1,10)
@@ -1169,6 +1205,7 @@ label showdown_rika:
         elif (score_player < score_opponent):
             e"You..."
             e"Lose"
+            play sound se5
             show r_ready with dis_fast:
                 xalign 0.8
                 yalign r_yalign
@@ -1197,6 +1234,7 @@ label showdown_rika:
         jump free_time
 
 label showdown_isabelle:
+    play music bgm2
     show classroom with dis_slow
     show i_neutral with dis_fast:
         xalign 0.5
@@ -1212,6 +1250,8 @@ label showdown_isabelle:
     hide i_smile with dis_fast
     hide classroom
     ####
+    stop music fadeout 1.0
+    play music bgm7
     $ los = 0
     $ destiny = 0
     $ dg = 1
@@ -1503,6 +1543,7 @@ label showdown_isabelle:
 
     label stage_2_isabelle_fight_los:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         hide e_neutral
         show r_laugh with dis_fast:
             xalign sm_x
@@ -1620,6 +1661,7 @@ label showdown_isabelle:
     label stage_2_isabelle_fight_destiny:
 
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         hide e_neutral
         show r_laugh with dis_fast:
             xalign sm_x
@@ -1743,6 +1785,7 @@ label showdown_isabelle:
             yalign sm_ymodifier + e_yalign - 1.0
         e"Ok.."
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 80 ):
             suc"You rolled [chance] out of [total] you needed a roll greater than 80"
             e"You Successfully sneak past them."
@@ -1828,6 +1871,7 @@ label showdown_isabelle:
 
     label stage_3_isabelle_fight_los:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 20):
             suc"You rolled [chance] out of [total] you needed a roll greater than 20"
             rik"The Light of Starmia shines bright, the gargoyles are stunned."
@@ -1874,6 +1918,7 @@ label showdown_isabelle:
 
     label stage_3_isabelle_fight_destiny:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 95):
             suc"You rolled [chance] out of [total] you needed a roll greater than 95"
             rik"It’s not an easy task to kill all those gargoyle with nothing but a
@@ -1933,6 +1978,7 @@ label showdown_isabelle:
 
     label stage_3_isabelle_run_straight:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         if (chance > 50):
             suc"You rolled [chance] out of [total] you needed a roll greater than 50"
             rik"You ran straight to the Dark Lord"
@@ -2036,6 +2082,7 @@ label showdown_isabelle:
 
     label stage_4_isabelle_destiny:
         $ chance = renpy.random.randint(1,total)
+        play sound se2
         fail"You rolled [chance] out of [total] you needed a roll greater than 100"
         show e_neutral with dis_fast:
             xalign sm_x
@@ -2078,12 +2125,14 @@ label showdown_isabelle:
                 "Continue":
                     jump isabelle_ending
                 "Re-roll Cost: 999999999999":
+                    "Insufficient points"
                     jump stage_3_isabelle_fight_destiny
         else:
             menu:
                 "Continue":
                     jump isabelle_ending
                 "Re-roll Cost: 999999999999":
+                    "Insufficient points"
                     jump stage_3_isabelle_fight_destiny
                 "Use Destiny Gambler":
                     mc"You forgot something"
@@ -2110,6 +2159,8 @@ label showdown_isabelle:
 
     label isabelle_ending:
         hide cave with dis_slow
+        stop music fadeout 1.0
+        play music bgm2
         show classroom with dis_slow
         if (score_player > score_opponent):
             jump isabelle_win
@@ -2127,12 +2178,14 @@ label showdown_isabelle:
             i"Here take it you...."
             i"Deserve it"
             hide i_surprise
+            stop music fadeout 1.0
             "Received the certificate from Isabelle!"
             $ finalshowdown = 1
             "Isabelle's past unlocked"
             "Would you like to view it?"
             menu:
                 "Yes":
+                    play music bgm10
                     "From when she was little, she never talk to boys because she went to an all-female school."
                     "The first time she went to university, nobody would talk to her."
                     "She was seen as this ‘cold’ person that has no desire to talk to anyone."
@@ -2145,6 +2198,7 @@ label showdown_isabelle:
                 "Continue":
                     jump endings
         label isabelle_lose:
+            play sound se5
             show i_thinking with dis_fast:
                 xalign 0.5
                 yalign i_yalign

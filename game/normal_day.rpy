@@ -6,7 +6,7 @@ label normal_day:
     "...."
 
     show classroom2 with dis_slow
-
+    play music bgm5
     $ rndm = renpy.random.randint(0,3)
     if rndm == 0:
         t"Class dismissed!"
@@ -28,4 +28,6 @@ label normal_day:
     $ intelligence = intelligence + 700
     $ chance = renpy.random.randint(1,10)
     $ tm = 17
+    stop music fadeout 1.0
+    play music bgm1 fadein 1.0
     jump free_time

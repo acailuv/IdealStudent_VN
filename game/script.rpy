@@ -11,6 +11,22 @@ define mc = Character("You", color="#007bff")
 define t = Character("Teacher")
 define suc = Character("Success")
 define fail = Character("Fail")
+
+# Declare Music
+define audio.bgm1 = "music/freetime_bgm.mp3"
+define audio.bgm2 = "music/class_bgm.mp3"
+define audio.bgm3 = "music/exam_bgm.mp3"
+define audio.bgm4 = "music/class2_bgm.mp3"
+define audio.bgm5 = "music/elizabeth_bgm.mp3"
+define audio.bgm6 = "music/rika_bgm.mp3"
+define audio.bgm7 = "music/isabelle_bgm.mp3"
+define audio.bgm8 = "music/past_bgm.mp3"
+define audio.se1 = "music/typing_se.mp3"
+define audio.se2 = "music/diceroll_se.mp3"
+define audio.se3 = "music/crowd_se.mp3"
+define audio.se4 = "music/win_se.mp3"
+define audio.se5 = "music/lose_se.mp3"
+define audio.se6 = "music/writing_se.mp3"
 # initializations (class, variables, etc.)
 init python:
     # player 'currencies'

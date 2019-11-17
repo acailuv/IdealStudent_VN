@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/showdown.rpy", line 1020: end of line expected.
-    rik"Why hello there"s
-                        ^
+File "game/showdown.rpy", line 1148: expected simple expression
+    stop music fadeout
+                      ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Nov 04 10:24:24 2019
+Sun Nov 17 21:12:50 2019

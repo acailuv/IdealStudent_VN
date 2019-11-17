@@ -5,7 +5,24 @@ label endings:
     hide classroom2
     hide classroom
     hide tidyroom
-    if GPA == 4:
+    hide e_neutral
+    hide e_neutral2
+    hide e_surprise
+    hide e_confuse
+    hide e_shy
+    hide r_neutral
+    hide r_happy
+    hide r_smile
+    hide r_surprise
+    hide r_ready
+    hide i_neutral
+    hide i_neutral2
+    hide i_neutral3
+    hide i_smile
+    hide i_surprise
+    if GPA == 4 and finalshowdown == 0:
+        jump perfectStudent
+    elif GPA == 4 and finalshowdown == 0:
         jump perfectGPA
     elif GPA >= 3 and finalshowdown == 1:
         jump sociableScholar
@@ -15,6 +32,13 @@ label endings:
         jump sociableNotScholar
     else:
         jump neither
+
+label perfectStudent:
+    "You attained a perfect GPA"
+    "Despite all the hassle you still somehow managed to get your certificate"
+    "Is that even possible?"
+    "Surely you will get to any job you want!"
+    jump endofgame
 
 label perfectGPA:
 
@@ -49,4 +73,7 @@ label neither:
     jump endofgame
 
 label endofgame:
-    "Fin"
+    "This project was created for a university assignment"
+    "Credits to: Liang Cai, Eugene Sebastian, and Alexandro Mikha for creating the game"
+    "Special thanks to Denny Raymond for helping in creating the poster and promotional video"
+    "Finish"

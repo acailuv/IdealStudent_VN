@@ -19,9 +19,15 @@ label first_day:
 
     #Screen Configurationss
     mc"(I've got a solid GPA of [GPA])"
-    mc"(It's only 30 days left before I graduate how gre-)"
-    mc"(Oh no! I just remembered I need to get a certificate)"
-    mc"(Better check the board)"
+    mc"(It's only 30 days left before I graduate)"
+    mc"(It's time to write my CV I guess...)"
+    mc"(.....)"
+    mc"(Grades, good, organizational experience...?)"
+    mc"(??)"
+    mc"(Oh crap! It's empty, how can people want to hire someone like me?)"
+    mc"(I wonder if there are clubs that are free right now)"
+    mc"(I mean it's so late in the semester...)"
+    mc"(Better check the board I guess)"
     mc"*Checks board*"
     mc"(All clubs are full? No way!)"
     mc"(I'm so dead...)"
@@ -31,6 +37,8 @@ label first_day:
     #Introduction to all the characters
 
     show classroom with dis_slow
+    play music bgm4
+
     mc"Uh... hello? Is this board game club?"
 
     show i_neutral with dis_fast:
@@ -82,7 +90,10 @@ label first_day:
     #Transition to free_time
     $ tm = 17
 
+
     show tidyroom with dis_slow
+    stop music fadeout 1.0
+    play music bgm1 fadein 1.0
 
     mc"(Alright I'm back home, looks like I really have to practice playing Is-She-Kay Life)"
     mc"(But I have to make sure my GPA doesn't drop... )"
