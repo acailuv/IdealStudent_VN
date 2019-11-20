@@ -736,7 +736,7 @@ label showdown_elizabeth:
             "Would you like to check it?"
             menu:
                 "Yes":
-                    play music bgm10
+                    play music bgm8
                     "There was a young girl. Her eyes are not perfect so she wears a thick pair of glasses whenever she goes to school."
                     "She also likes reading comics and collecting them, too. When she was in fifth grade, her friends make fun of her because she wears glasses and her twin ponytails."
                     "They called her a nerd because she loves to read comic books. This goes on until she was in middle school."
@@ -914,6 +914,7 @@ label showdown_rika:
                     suc"You had enough fuel to get to your destination"
                     i"Point to the player"
                     $ score_player = score_player + 1
+                    jump stage_4_rika
 
     label stage_3_rika_damaged_ship:
         $ chance = renpy.random.randint(1,total)
@@ -1107,6 +1108,7 @@ label showdown_rika:
                     "Continue":
                         jump rika_ending
                     "Re-roll Cost: 1000":
+                        $isk -= 1000
                         jump stage_5_rika_minor_injury
 
     label stage_5_rika_no_injury:
@@ -1142,6 +1144,7 @@ label showdown_rika:
                     "Continue":
                         jump rika_ending
                     "Re-roll Cost: 400":
+                        $isk -= 400
                         jump stage_5_rika_no_injury
 
 
@@ -1185,7 +1188,7 @@ label showdown_rika:
             hide r_smile
             menu:
                 "Yes":
-                    play music bgm10
+                    play music bgm8
                     "Two years ago she was a very cheerful high schooler. She smiled all the time. She sees everything from a positive point of view."
                     "Five years ago, she was a decently happy and kind  middle schooler. She likes to cheer up her friends when in need and tell them that it was all okay."
                     "Nine Years ago, she was a lonely little girl that no one likes. She is left alone playing at the park when the whole class played hide and seek at recess."
@@ -1381,7 +1384,7 @@ label showdown_isabelle:
             xalign sm_x
             yalign sm_ymodifier + r_yalign
         rik"Strangely, there is a note and 2 items next to you. The note says “If you are the hero foretold, choose the right relic to hold.”"
-        hide r_neutral
+        hide r_laugh
         show e_neutral with dis_fast:
             xalign sm_x
             yalign sm_ymodifier + e_yalign - 1.0
@@ -1430,7 +1433,10 @@ label showdown_isabelle:
         mc"What?"
         hide r_smile
         show e_confused with dis_fast:
+            xalign sm_x
+            yalign sm_ymodifier + e_yalign
         e"*blushes* Rika!"
+        hide e_confused
         menu:
             "Pick “The Light of Starmia”":
                 $ los = 1
@@ -1449,6 +1455,7 @@ label showdown_isabelle:
             xalign sm_x
             yalign sm_ymodifier + i_yalign
         i"Are you guys done?"
+        hide i_neutral
         show e_neutral2 with dis_fast:
             xalign sm_x
             yalign sm_ymodifier + e_yalign - 1.0
@@ -1539,6 +1546,7 @@ label showdown_isabelle:
                         xalign sm_x
                         yalign sm_ymodifier + r_yalign
                     rik"I'm going to the toilet be right back!"
+                    hide r_neutral
                     jump stage_3_isabelle
 
     label stage_2_isabelle_fight_los:
@@ -1934,6 +1942,7 @@ label showdown_isabelle:
                 yalign sm_ymodifier + r_yalign
             rik"2 points to the player!"
             $ score_player = score_player + 2
+            hide r_neutral
             jump stage_4_isabelle
         else:
             fail"You rolled [chance] out of [total] you needed a roll greater than 20"
@@ -2041,6 +2050,7 @@ label showdown_isabelle:
         $ renpy.pause(0.5)
         e"The Dark Lord stood up and gathers his dark magical power into a concentrated ball on his right hand. The final battle starts."
         rik"Isabelle lunges forward and used her Light Sword skill, but nothing happens."
+        hide r_neutral
         show i_surprise with dis_fast:
             xalign sm_x
             yalign sm_ymodifier + i_yalign
@@ -2066,6 +2076,7 @@ label showdown_isabelle:
             xalign sm_x
             yalign sm_ymodifier + r_yalign
         rik"Anyways, what do you want to do?"
+        hide r_neutral
         menu:
             "Fight":
                 if (los == 1):
@@ -2185,7 +2196,7 @@ label showdown_isabelle:
             "Would you like to view it?"
             menu:
                 "Yes":
-                    play music bgm10
+                    play music bgm8
                     "From when she was little, she never talk to boys because she went to an all-female school."
                     "The first time she went to university, nobody would talk to her."
                     "She was seen as this ‘cold’ person that has no desire to talk to anyone."

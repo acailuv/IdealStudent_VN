@@ -21,12 +21,14 @@ define audio.bgm5 = "music/elizabeth_bgm.mp3"
 define audio.bgm6 = "music/rika_bgm.mp3"
 define audio.bgm7 = "music/isabelle_bgm.mp3"
 define audio.bgm8 = "music/past_bgm.mp3"
+define audio.bgm9 = "music/mainmenu_bgm.mp3"
 define audio.se1 = "music/typing_se.mp3"
 define audio.se2 = "music/diceroll_se.mp3"
 define audio.se3 = "music/crowd_se.mp3"
 define audio.se4 = "music/win_se.mp3"
 define audio.se5 = "music/lose_se.mp3"
 define audio.se6 = "music/writing_se.mp3"
+
 # initializations (class, variables, etc.)
 init python:
     # player 'currencies'
@@ -50,7 +52,7 @@ init python:
     # Elizabeth y align
     e_yalign = -1.2
     # Rika y align
-    r_yalign = -1.35
+    r_yalign = -1.65
     # Isabelle y align
     i_yalign = -0.75
 

@@ -25,6 +25,7 @@ label normal_day:
         mc"Yes, can I know when we're having the test?"
         t"It's called a surprise exam for a reason"
         mc"Ugh..."
+    "You gained 700 Intelligence Points for attending today's class."
     $ intelligence = intelligence + 700
     $ chance = renpy.random.randint(1,10)
     $ tm = 17

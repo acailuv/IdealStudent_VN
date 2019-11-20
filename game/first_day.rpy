@@ -21,9 +21,11 @@ label first_day:
     mc"(I've got a solid GPA of [GPA])"
     mc"(It's only 30 days left before I graduate)"
     mc"(It's time to write my CV I guess...)"
+    play sound se1
     mc"(.....)"
     mc"(Grades, good, organizational experience...?)"
     mc"(??)"
+    stop sound
     mc"(Oh crap! It's empty, how can people want to hire someone like me?)"
     mc"(I wonder if there are clubs that are free right now)"
     mc"(I mean it's so late in the semester...)"
