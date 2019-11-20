@@ -20,9 +20,7 @@ label endings:
     hide i_neutral3
     hide i_smile
     hide i_surprise
-    if GPA == 4 and finalshowdown == 0:
-        jump perfectStudent
-    elif GPA == 4 and finalshowdown == 0:
+    if GPA == 4:
         jump perfectGPA
     elif GPA >= 3 and finalshowdown == 1:
         jump sociableScholar
@@ -33,12 +31,7 @@ label endings:
     else:
         jump neither
 
-label perfectStudent:
-    "You attained a perfect GPA"
-    "Despite all the hassle you still somehow managed to get your certificate"
-    "Is that even possible?"
-    "Surely you will get to any job you want!"
-    jump endofgame
+
 
 label perfectGPA:
 
@@ -76,4 +69,6 @@ label endofgame:
     "This project was created for a university assignment"
     "Credits to: Liang Cai, Eugene Sebastian, and Alexandro Mikha for creating the game"
     "Special thanks to Denny Raymond for helping in creating the poster and promotional video"
+    "Background Music: https://www.bensound.com"
+    "Sound Effects: https://www.audioblocks.com"
     "Finish"

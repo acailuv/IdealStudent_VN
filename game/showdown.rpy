@@ -796,9 +796,6 @@ label showdown_rika:
     show i_neutral2 with dis_slow:
         xalign 0.8
         yalign i_yalign
-    show e_neutral2 with dis_slow:
-        xalign 0.6
-        yalign e_yalign - 1.0
     i"In this showdown both me and Elizabeth will be the story master"
 
     hide classroom
@@ -1065,7 +1062,7 @@ label showdown_rika:
         mc"Uh? What? What's the difference?"
         i"Shut up it's in the book unless you want me to slam the book to your face again"
         mc"*sigh* fine..."
-        $ score_opponent = renpy.random.randint(9,10)
+        $ score_opponent = renpy.random.randint(6,8)
         menu:
             "Fight!":
                 if (minor_injury == 1):
@@ -1219,6 +1216,7 @@ label showdown_rika:
             hide e_neutral
         else:
             e"It's a draw"
+            hide e_neutral
             show r_ready with dis_fast:
                 xalign 0.5
                 yalign r_yalign

@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/showdown.rpy", line 1148: expected simple expression
-    stop music fadeout
-                      ^
+File "game/endings.rpy", line 23: expected statement.
+    elif GPA == 4:
+             ^
+
+File "game/endings.rpy", line 25: expected statement.
+    elif GPA >= 3 and finalshowdown == 1:
+             ^
+
+File "game/endings.rpy", line 27: expected statement.
+    elif GPA >= 3 and finalshowdown == 0:
+             ^
+
+File "game/endings.rpy", line 29: expected statement.
+    elif GPA < 3 and finalshowdown == 1:
+             ^
+
+File "game/endings.rpy", line 31: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Sun Nov 17 21:12:50 2019
+Wed Nov 20 09:36:11 2019
