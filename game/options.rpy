@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "v1.0.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -49,7 +49,7 @@ As You progress through the game, fragments of the past about the people you mee
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Graduatingin30Days"
+define build.name = "IdealStudent"
 
 
 ## Sounds and music ############################################################
