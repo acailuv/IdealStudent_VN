@@ -7,13 +7,15 @@ label exams:
     show classroom2 with dis_slow
     stop music fadeout 1.0
     play music bgm3
+    $ min_perf_cost = 800
+    $ min_pass_cost = 700
     $ perf_score_cost = (normal_days_count - exam_days_count)*800
     $ pass_score_cost = (normal_days_count - exam_days_count)*700
     # To prevent the score cost to be negative
-    if (perf_score_cost < 0):
-        $ perf_score_cost = 0
-    if (pass_score_cost < 0):
-        $ pass_score_cost = 0
+    if (perf_score_cost < min_perf_cost):
+        $ perf_score_cost = min_perf_cost
+    if (pass_score_cost < min_pass_cost):
+        $ pass_score_cost = min_pass_cost
     t"Alright class we have an exam today!"
     menu:
         "A surprise exam!"
