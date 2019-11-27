@@ -1062,7 +1062,7 @@ label showdown_rika:
         mc"Uh? What? What's the difference?"
         i"Shut up it's in the book unless you want me to slam the book to your face again"
         mc"*sigh* fine..."
-        $ score_opponent = renpy.random.randint(6,8)
+        $ score_opponent = renpy.random.randint(2,5)
         menu:
             "Fight!":
                 if (minor_injury == 1):
